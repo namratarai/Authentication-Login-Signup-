@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body style="margin-right:auto">
+<table bgcolor="#FFCCFF"border="2" align="center" width="837" height="100%">
+<tr>
+<th>
+<h1><center><font color="#990000">Simple Login-Registration Form</font></center></h1><br /><br />
+
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;1)LOGIN FORM</h2>
+
+<p>In general computer usage, logon is the procedure used to get access to an operating system or application, usually in a remote computer. Almost always a logon requires that the user have (1) a user ID and (2) a password. Often, the user ID must conform to a limited length such as eight characters and the password must contain at least one digit and not match a natural language word. The user ID can be freely known and is visible when entered at a keyboard or other input device. The password must be kept secret (and is not displayed as it is entered). Some Web sites require users to register in order to use the site; registered users can then enter the site by logging on.</p><br />
+<br />
+<hr />
+
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;2)REGISTRATION FORM</h2>
+
+<p>A registration form is a list of fields that a user will input data into and submit to a company or individual. There are many reasons why you would want a person to fill out a registration form. Companies use registration forms to sign up customers for subscriptions, services, or other programs or plans</p><br /><br />
+
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;3)LOGOUT</h2>
+
+<p>To end a session at the computer. For personal computers, you can log out simply by exiting applications and turning the machine off. On larger computers and networks, where you share computer resources with other users, there is generally an operating system command that lets you log off.</p>
+<br /><br />
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;3)USER</h2>
+
+<p>User is a knowledge seeker, or more theoretical word, a learner. The user has to be registered and log in into the system before he/she carries out their functions.</p>
+<br />
+
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;SYSTEM REQUIREMENT</h2><br />
+.         Operating System                  : Windows/mac<br />
+
+·         Technology                       : PHP<br />
+
+·         Web Technologies                  : Html, JavaScript, CSS<br />
+
+·         IDE                               : Notepad++<br />
+
+·         Web Server                         : Xampp/wamp<br />
+
+.         Database                            :   MySql
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;registration.php</h2>
+
+  <p>Firstly you need to sign up .</p>
+<p>  Enter your name</p>
+<p>Enter your email</p>
+<p>Enter your password </p>
+<p>Enter your mobile no.</p>
+<p> <br />
+.   <img src="https://trello-attachments.s3.amazonaws.com/5b963d814c4c608687f47dfe/5bb1b3ababfd7664b93d6a39/e16e8b7de95eb116e2e95f57799076d2/Screenshot_(132).png" height="400" width="800" /><br />
+  <br />
+</p>
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;login.php</h2><br />
+Enter  email id & password<br />
+<img src="https://trello-attachments.s3.amazonaws.com/5b963d814c4c608687f47dfe/5bb1b3ababfd7664b93d6a39/74de0fae12b6bd624bda2d784659ce9f/Screenshot_(134).png" height="400" width="800" /><br /><br />
+
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;welcome.php</h2><br />
+After login successfully,you will reach to welcome page.this contain a logout button .<br />
+<img src="https://trello-attachments.s3.amazonaws.com/5b963d814c4c608687f47dfe/5bb1b3ababfd7664b93d6a39/9d6229dfd078f63dd93369099e45dcb0/Screenshot_(135).png" height="400" width="800" /><br />
+
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;SOME RELATED CODES:</h2><br />
+
+<h3>connection.php</h3><br />
+--->This page helps in connecting the project to database ie. phpMyAdmin .
+The data in a MySQL database are stored in tables. A table is a collection of related data, and it consists of columns and rows.<br />
+CODE <script src="https://snipsave.com/embed/TXBSnyQ0yqljIDbia7.js"></script><br />
+<br />
+
+<hr />
+<h3>registration.php</h3><br />
+<p>--->A registration form is a list of fields that a user will input data into and submit to a company or individua.<br />
+Here,user have to register first.After registration user are able to login.Now we will discuss about some code.:::</p>
+
+   *  session_start();      
+  <p> // A session is a way to store information (in variables) to be used across multiple pages.</p>
+   *  require('connection.php'); </p> 
+   
+   
+    *  require('connection.php');       
+   <p>//  This function connects pages to the database.</p>
+   
+   
+   *   $a=$_POST['email'];  
+   <p>   // Here email is name of the input field.It is stored into variable $a</p>
+   
+   
+   
+   * $b=$_POST['pass']; 
+   <p>  //Here pass is name of the input field.It is stored into variable $b.</p>
+   
+   
+   *  $insert=mysql_query("insert into user(name, email, password, mobile) values('$a','$b','$c','$d')") 
+       <p>  //mysql_query generates query.User is our table name.name,email,password & mobile are the name of columns.It stores the 
+value of &a,&b&c,&d respectively.</p>
+
+<p>After registration our page will redirect to login.php</p>
+
+CODE <script src="https://snipsave.com/embed/nQkR7iqcLq7joJ9IB1.js"></script>
+
+<br />
+
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;login.php</h2><br />
+<p>In general computer usage, logon is the procedure used to get access to an operating system or application, usually in a remote computer. Almost always a logon requires that the user have (1) a user ID and (2) a password.</p>
+
+                                     
+  *  session_start();      
+  <p> // A session is a way to store information (in variables) to be used across multiple pages.</p>
+   *  require('connection.php'); </p> 
+   
+   
+    *  require('connection.php');       
+   <p>//  This function connects pages to the database.</p>
+   
+   
+   *   $sql=mysql_query("select * from user where email='$a' and password='$b'") or die('Error:'.mysql_error());
+   <p> //The SELECT statement is used to select data from one or more tables.Here data is selected from user table.the selected data is email &password.</p>
+   *    mysql_num_rows($sql);
+   <p>//The mysqli_num_rows() function returns the number of rows in a result set.</p>
+   
+    *   if($r==true) 
+	<p>//Checks the condition whether email & password value from the user table matches or not!</p>
+
+            <pre> $a=$_POST['email'];     //email is name of the input field.
+                  $b=$_POST['pass'];      //pass is name of the input field.</pre>
+		
+<p>After successful login our page will be redirect  to welcome page.</p>
+CODE <script src="https://snipsave.com/embed/7BPBRuuJBtOaFk4Dlc.js"></script><br /><br />
+
+<hr />
+
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;welcome.php</h2>
+<p>This page contains the log out button from where we will reach to login page directly.</p>
+
+
+CODE<script src="https://snipsave.com/embed/RE64sSdRPFfpKUCZID.js"></script><br /><br />
+
+<hr />
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;logout.php</h2>
+<p>To end a session at the computer. For personal computers, you can log out simply by exiting applications and turning the machine off. On larger computers and networks, where you share computer resources with other users, there is generally an operating system command that lets you log off..</p>
+
+
+<pre><?php
+session_start();  //form using email as a variable . 
+unset($_SESSION['email']);  //unset() destroys the specified variables like email.
+session_destroy();//session_destroy() destroys all of the data associated with the current session.
+header('Location: login.php');//after log-out,redirect to login page.
+exit;
+?>
+</pre>
+CODE<script src="https://snipsave.com/embed/bGnW6Ajmwyimad88Tg.js"></script><br /><br />
+<hr />
+</th>
+</tr>
+
+</table>
+</body>
+</html>
